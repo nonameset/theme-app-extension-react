@@ -1,10 +1,18 @@
 export default function App({ home }) {
-  console.log('Home', home)
+  console.log('Home', home);
 
+  let content;
+  if (home === 'test-section') {
+    content = <div>Welcome Home!</div>;
+  } else if (home === 'payment-section') {
+    content = <div>Payment Section</div>;
+  } else {
+    content = <div>Hello From React!</div>;
+  }
+  
   return (
     <div className="tw-text-5xl tw-text-red-600">
-      Hello From React!
+      {content}
     </div>
-  )
+  );
 }
-
