@@ -9,10 +9,7 @@ export default function App({ home }) {
   } else {
     content = <div>Hello From React!</div>;
   }
-  
   return (
-    <div className="tw-text-5xl tw-text-red-600">
-      {content}
-    </div>
+    {content}
   );
 }

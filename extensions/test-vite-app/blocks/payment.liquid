@@ -1,24 +1,36 @@
 <div id="root">
-  {% liquid
-    # Relative to entrypointsDir
-    render 'vite-tag' with 'theme.css'
-    render 'vite-tag' with 'theme.jsx'
-  %}payment
+    {% liquid
+      # Relative to entrypointsDir
+      render 'vite-tag' with 'theme.css'
+      render 'vite-tag' with 'theme.jsx'
+    %}
+
+    <div class="tw-bg-gray-100 tw-rounded-md tw-py-2 tw-px-2 tw-mb-2">
+        <p class="tw-text-sm tw-font-bold tw-text-center tw-mb-1">Sichere Bezahlmethoden</p>
+      
+        <div class="tw-flex tw-justify-center tw-gap-2 tw-flex-row tw-wrap tw-flex-wrap">
+          {%- unless shop.enabled_payment_types == empty -%}
+            {%- for type in shop.enabled_payment_types -%}
+              <figure>{{ type | payment_type_svg_tag: class: 'payment-icons__icon' }}</figure>
+            {%- endfor -%}
+          {%- endunless -%}
+        </div>
+    </div>
 </div>
-
-<script>
-  const home = 'payment-section'
-</script>
-
-{% schema %}
-{
-  "name": "Payment",
-  "templates": [
-    "page"
-  ],
-  "target": "section",
-  "settings": [
-
-  ]
-}
-{% endschema %}
+  
+  <script>
+    const home = 'payment-section'
+  </script>
+  
+  {% schema %}
+  {
+    "name": "Payment",
+    "templates": [
+      "page"
+    ],
+    "target": "section",
+    "settings": [
+    ]
+  }
+  {% endschema %}
+  
