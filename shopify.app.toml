@@ -3,7 +3,7 @@
 client_id = "6f5101f55dd74c253fd96884cf56437f"
 name = "section-hero"
 handle = "section-hero-3"
-application_url = "https://proposal-palmer-defensive-described.trycloudflare.com"
+application_url = "https://corpus-conditional-levy-mississippi.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://proposal-palmer-defensive-described.trycloudflare.com/auth/callback",
-  "https://proposal-palmer-defensive-described.trycloudflare.com/auth/shopify/callback",
-  "https://proposal-palmer-defensive-described.trycloudflare.com/api/auth/callback"
+  "https://corpus-conditional-levy-mississippi.trycloudflare.com/auth/callback",
+  "https://corpus-conditional-levy-mississippi.trycloudflare.com/auth/shopify/callback",
+  "https://corpus-conditional-levy-mississippi.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
